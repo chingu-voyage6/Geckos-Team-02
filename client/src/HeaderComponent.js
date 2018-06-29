@@ -6,13 +6,14 @@ class HeaderComponent extends React.Component {
   render() {
     return (
       <header>
-        <navbar>
-          <ul>
-            <li>Link 1</li>
-            <li>Link 1</li>
-            <li>Link 1</li>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <a className="navbar-brand" href="#">COB</a>
+          <ul className="navbar-nav">
+            <li className="nav-item"><a href="#">Home</a></li>
+            <li className="nav-item"><a href="#">Log In</a></li>
+            <li className="nav-item"><a href="#">Sign Up</a></li>
           </ul>
-        </navbar>
+        </nav>
       </header>
     )
   }

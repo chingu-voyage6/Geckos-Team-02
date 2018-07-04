@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../css/App.css';
 
-class FooterComponent extends Component {
+class FooterComponent extends React.Component {
 
   render() {
     return (

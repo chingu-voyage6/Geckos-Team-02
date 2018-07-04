@@ -14,9 +14,9 @@ class App extends React.Component {
         <HeaderComponent />
         <MainComponent />
         <FooterComponent />
-        <FormComponent />
+     ;;;;;;   <FormComponent />
       </div>
-    )
+    );
   }
 
 }

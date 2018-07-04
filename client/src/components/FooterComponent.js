@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import '../css/App.css';
 
 class FooterComponent extends React.Component {
 
@@ -9,7 +9,7 @@ class FooterComponent extends React.Component {
         <p>Sample text here</p>
 
       </footer>
-    )
+    );
   }
 
 }

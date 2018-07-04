@@ -12,7 +12,7 @@ class MainComponent extends React.Component {
           <hr className="my-4"/>
           <button className="btn btn-success">Click here to sign up!</button>
       </div>
-    )
+    );
   }
 
 }

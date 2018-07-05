@@ -5,9 +5,11 @@ module.exports = {
         "es6": true
     },
     "extends": "eslint:recommended",
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
-            "jsx": true
+            "jsx": true,
+            "js": true
         },
         "ecmaVersion": 2018,
         "sourceType": "module"
@@ -21,12 +23,15 @@ module.exports = {
         "no-undef": "warn",
         "no-unreachable": "warn",
         "no-unused-vars": "warn",
+        "react/jsx-uses-vars": 1,
+        "react/react-in-jsx-scope": 1,
         "constructor-super": "warn",
         "valid-typeof": "warn",
         "linebreak-style": [
             "error",
             "unix"
         ],
+
         "quotes": [
             "error",
             "single"
@@ -34,6 +39,10 @@ module.exports = {
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "indent": [
+          "error",
+          2
+      ],
     }
 };

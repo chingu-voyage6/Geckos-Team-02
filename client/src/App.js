@@ -7,7 +7,6 @@ import FormComponent from './components/FormComponent';
 
 
 class App extends React.Component {
-
   render() {
     return (
       <div className="container">
@@ -18,6 +17,5 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 export default App;

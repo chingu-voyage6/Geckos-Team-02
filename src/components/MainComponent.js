@@ -1,7 +1,8 @@
 import React from 'react';
 import '../css/App.css';
 import SearchComponent from './SearchComponent';
-
+import ResultsComponent from './ResultsComponent'
+import FormComponent from './FormComponent';
 
 class MainComponent extends React.Component {
 
@@ -15,9 +16,10 @@ class MainComponent extends React.Component {
             <hr className="my-4"/>
             <button className="btn btn-success">Click here to sign up!</button>
         </div>
-        <div>
-          <SearchComponent />
-        </div>
+        <SearchComponent />
+        <ResultsComponent />
+        <FormComponent />
+
       </div>
     );
   }

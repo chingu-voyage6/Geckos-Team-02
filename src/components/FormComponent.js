@@ -11,16 +11,16 @@ class FormComponent extends React.Component {
   render () {
     return (
       <form>
-        <div class="form-group">
-          <label for="Email">Email address</label>
-          <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.userName} />
-          <small id="emailHelp" class="form-text text-muted">We use your email like a username.</small>
+        <div className="form-group">
+          <label htmlFor="Email">Email address</label>
+          <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.userName} />
+          <small id="emailHelp" className="form-text text-muted">We use your email like a username.</small>
         </div>
-        <div class="form-group">
-          <label for="inputPassword">Password</label>
-          <input type="password" class="form-control" id="inputPassword" placeholder="Password" value={this.state.password} />
+        <div className="form-group">
+          <label htmlFor="inputPassword">Password</label>
+          <input type="password" className="form-control" id="inputPassword" placeholder="Password" value={this.state.password} />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     );
   }

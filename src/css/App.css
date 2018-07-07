@@ -1,3 +1,9 @@
+.headerBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
 h2, .searchBox {
   text-align: center;
 }
@@ -54,6 +60,6 @@ h2, .searchBox {
 }
 
 .panel-heading {
-  font-weight: bold;
-  text-decoration: underline;
+  /* font-weight: bold;
+  text-decoration: underline; */
 }

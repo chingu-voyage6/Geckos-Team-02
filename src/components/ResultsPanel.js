@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/App.css';
-import Panel from 'react-bootstrap/lib/Panel';
+import { Panel } from 'react-bootstrap';
 
 class ResultsPanel extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class ResultsPanel extends React.Component {
     return (
       <div className="resultsLists">
         {this.state.results.map( (item, i) => {
-          return <Panel>
+          return (<Panel>
             <Panel.Heading>
               <Panel.Title key={i}>{item}</Panel.Title>
             </Panel.Heading>
@@ -22,9 +22,10 @@ class ResultsPanel extends React.Component {
               <li>.56 miles away!</li>
               <li> 3/4 rating!</li>
               <li>Opens at 10 am!</li>
-              <li><a href="#">Make reservation</a></li>
+              <li><a href="#no_go">Make reservation</a></li>
             </Panel.Body>
           </Panel>
+        )
         })
         }
       </div>

@@ -1,19 +1,30 @@
 import React from 'react';
 import '../css/App.css';
+import ModalSignUpComponent from './ModalSignUpComponent';
+import ModalLoginComponent from './ModalLoginComponent';
+
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 class HeaderComponent extends React.Component {
 
   render() {
     return (
-      <header>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <a className="navbar-brand" href="#">COB</a>
-          <ul className="navbar-nav">
-            <li className="nav-item"><a href="#">Home</a></li>
-            <li className="nav-item"><a href="#">Log In</a></li>
-            <li className="nav-item"><a href="#">Sign Up</a></li>
-          </ul>
-        </nav>
+      <header className="headerBox">
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <a href="#brand">COB</a>
+            </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem eventKey={1}>
+              <ModalSignUpComponent />
+            </NavItem>
+            <NavItem eventKey={2}>
+              <ModalLoginComponent />
+            </NavItem>
+          </Nav>
+        </Navbar>
       </header>
     );
   }

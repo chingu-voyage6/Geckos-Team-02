@@ -23,7 +23,7 @@ module.exports = {
         "no-undef": "warn",
         "no-unreachable": "warn",
         "no-unused-vars": "warn",
-        "react/jsx-uses-vars": 1,
+        "react/jsx-uses-vars": "error",
         "react/react-in-jsx-scope": 1,
         "constructor-super": "warn",
         "valid-typeof": "warn",

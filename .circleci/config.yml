@@ -7,7 +7,7 @@ jobs:
   build:
     branches:
         only:
-          - dev
+          - circle-ci
     docker:
       - image: circleci/node:10
 

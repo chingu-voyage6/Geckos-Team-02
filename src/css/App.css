@@ -1,0 +1,65 @@
+.headerBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+h2, .searchBox {
+  text-align: center;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.searchBox > input {
+  height: 40px;
+  width: 100%;
+}
+
+.filterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filterOptions {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2px;
+}
+
+.filterHeading {
+  height: 40px;
+  padding: 5px;
+}
+
+.resultsBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultsLists {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  list-style: none;
+}
+
+.resultsLists .panel {
+  padding: 20px;
+}
+
+.panel-heading {
+  /* font-weight: bold;
+  text-decoration: underline; */
+}

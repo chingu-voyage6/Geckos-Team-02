@@ -10,13 +10,16 @@ class HeaderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      show: null
     };
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal = () => {
+  toggleModal(id) {
     this.setState({
-      isOpen: !this.state.isOpen
+      isOpen: !this.state.isOpen,
+      show: id
     });
   }
 
@@ -32,13 +35,14 @@ class HeaderComponent extends React.Component {
           </Navbar.Header>
 
           <Nav>
-            <NavItem eventKey={1}>
-              <ModalSignUpComponent />
+            <NavItem onClick={ () => this.toggleModal('signUp') } eventKey={1}>
+              Sign up
+              <ModalSignUpComponent show={ this.state.show === 'signUp' && this.state.isOpen}/>
             </NavItem>
 
-            <NavItem onClick={this.toggleModal} eventKey={2}>
+            <NavItem onClick={ () => this.toggleModal('login')} eventKey={2}>
               Login
-              <ModalLoginComponent show={this.state.isOpen}/>
+              <ModalLoginComponent show={ this.state.show === 'login' && this.state.isOpen}/>
             </NavItem>
 
           </Nav>

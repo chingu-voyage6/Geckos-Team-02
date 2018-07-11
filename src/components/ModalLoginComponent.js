@@ -11,44 +11,30 @@ class ModalLoginComponent extends React.Component {
       return null;
     }
 
-    const backDrop = {
-      position: 'fixed',
-      top: 0,
-      bottom: 0,
-      left: 0,
-      right: 0,
-      backgroundColor: 'rgba(0,0,0,0.3)',
-      padding: 50
-    };
-
-    const modalStyle = {
-      backgroundColor: '#fff',
-      borderRadius: 5,
-      maxWidth: 500,
-      minHeight: 300,
-      margin: '0 auto',
-      padding: 30
-    };
      return (
-      // <div className="backdropClass" style={backDrop}>
-      //     <div className="modal" style={modalStyle}>
-      //
-      //       <div className="footer">
-      //         <button onClick={this.props.onClose}>Close</button>
-      //       </div>
-      //     </div>
-      // </div>
-      <div className="backdropClass" style={backDrop}>
-        <Modal.Dialog style={modalStyle}>
+      <div className="backdropClass">
+        <Modal.Dialog className="modalStyleClass">
           <Modal.Header>
             <Modal.Title>Login</Modal.Title>
           </Modal.Header>
 
-          <Modal.Body>Login in form will go in here</Modal.Body>
+          <Modal.Body>
+            <form>
+              <div className="form-group">
+                <label htmlFor="Email">Email address</label>
+                <input type="email" className="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  />
+                <small id="emailHelp" className="form-text text-muted">We use your email like a username.</small>
+              </div>
+              <div className="form-group">
+                <label htmlFor="inputPassword">Password</label>
+                <input type="password" className="form-control" id="inputPassword" placeholder="Password"  />
+              </div>
+              <button type="submit" className="btn btn-primary">Submit</button>
+            </form>
+          </Modal.Body>
 
           <Modal.Footer>
-            <Button onClick={this.props.onClose}>Close</Button>
-            <Button bsStyle="primary">Save changes</Button>
+            <Button onClick={this.props.onHide}>Close</Button>
           </Modal.Footer>
         </Modal.Dialog>
       </div>
@@ -56,8 +42,8 @@ class ModalLoginComponent extends React.Component {
   }
 }
 
-Modal.PropTypes = {
-  onClose: PropTypes.func.isRequired,
+Modal.propTypes = {
+  onHide: PropTypes.func.isRequired,
   show: PropTypes.bool,
   children: PropTypes.node
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import '../css/App.css';
 import SearchComponent from './SearchComponent';
 import ResultsComponent from './ResultsComponent'
-import FormComponent from './FormComponent';
 
 class MainComponent extends React.Component {
 
@@ -18,7 +17,6 @@ class MainComponent extends React.Component {
         </div>
         <SearchComponent />
         <ResultsComponent />
-        <FormComponent />
 
       </div>
     );

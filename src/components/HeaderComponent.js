@@ -10,20 +10,28 @@ class HeaderComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOpen: false,
-      show: null
+      // isOpen: null,
+      showLogin: false,
+      showSignUp: false
     };
-    this.toggleModal = this.toggleModal.bind(this);
+    this.toggleLogin = this.toggleLogin.bind(this);
+    this.toggleSignUp = this.toggleSignUp.bind(this);
   }
 
-  toggleModal(id) {
+  toggleLogin() {
     this.setState({
-      isOpen: !this.state.isOpen,
-      show: id
-    });
+      showLogin: !this.state.showLogin
+    })
+  }
+
+  toggleSignUp() {
+    this.setState({
+      showSignUp: !this.state.showSignUp
+    })
   }
 
   render() {
+
     return (
       <header className="headerBox">
         <Navbar>
@@ -35,15 +43,22 @@ class HeaderComponent extends React.Component {
           </Navbar.Header>
 
           <Nav>
-            <NavItem onClick={ () => this.toggleModal('signUp') } eventKey={1}>
+            <NavItem onClick={ this.toggleSignUp } eventKey={1}>
               Sign up
-              <ModalSignUpComponent show={ this.state.show === 'signUp' && this.state.isOpen}/>
             </NavItem>
+              <ModalSignUpComponent
+                show={this.state.showSignUp}
+                onHide={this.toggleSignUp}
+              />
 
-            <NavItem onClick={ () => this.toggleModal('login')} eventKey={2}>
+
+            <NavItem onClick={ this.toggleLogin } eventKey={2}>
               Login
-              <ModalLoginComponent show={ this.state.show === 'login' && this.state.isOpen}/>
             </NavItem>
+            <ModalLoginComponent
+              show={ this.state.showLogin}
+              onHide={this.toggleLogin}
+            />
 
           </Nav>
 

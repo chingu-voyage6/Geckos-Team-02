@@ -6,7 +6,7 @@ class FooterComponent extends React.Component {
   render() {
     return (
       <footer>
-        <p>Sample text here</p>
+        <p> Sample text here for footer  </p>
 
       </footer>
     );
